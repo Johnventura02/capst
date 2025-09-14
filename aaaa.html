@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Church Connect Platform</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Accessibility & SEO -->
+  <meta name="description" content="Church Connect Platform for bulletins, announcements, events, ministry groups, and analytics." />
+</head>
+<body>
+ 
+  <!-- Header -->
+  <header>
+    <h1>Church Connect Platform</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#bulletins">Bulletins</a></li>
+        <li><a href="#announcements">Announcements</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#groups">Groups</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Bulletins -->
+    <section id="bulletins" aria-labelledby="bulletins-heading">
+      <h2 id="bulletins-heading">Digital Bulletins</h2>
+      <div id="bulletin-list" class="list-container"></div>
+      
+      <form id="bulletin-form" class="form-section">
+        <label>
+          Title:
+          <input type="text" name="title" required />
+        </label>
+        <label>
+          Content:
+          <textarea name="content" required></textarea>
+        </label>
+        <button type="submit">Add Bulletin</button>
+      </form>
+    </section>
+
+    <!-- Announcements -->
+    <section id="announcements" aria-labelledby="announcements-heading">
+      <h2 id="announcements-heading">Announcements Hub</h2>
+      <div id="announcement-list" class="list-container"></div>
+      
+      <form id="announcement-form" class="form-section">
+        <label>
+          Title:
+          <input type="text" name="title" required />
+        </label>
+        <label>
+          Category:
+          <select name="category" required>
+            <option value="worship">Worship</option>
+            <option value="youth">Youth Ministry</option>
+            <option value="fundraising">Fundraising</option>
+            <option value="community">Community Service</option>
+          </select>
+        </label>
+        <label>
+          Details:
+          <textarea name="details" required></textarea>
+        </label>
+        <button type="submit">Post Announcement</button>
+      </form>
+    </section>
+
+    <!-- Calendar -->
+    <section id="calendar" aria-labelledby="calendar-heading">
+      <h2 id="calendar-heading">Church Calendar</h2>
+      <div id="calendar-list" class="list-container"></div>
+      
+      <form id="calendar-form" class="form-section">
+        <label>
+          Event:
+          <input type="text" name="event" required />
+        </label>
+        <label>
+          Date & Time:
+          <input type="datetime-local" name="datetime" required />
+        </label>
+        <button type="submit">Add Event</button>
+      </form>
+      
+      <div class="export-buttons">
+        <button id="export-google">Export to Google Calendar</button>
+        <button id="export-ical">Export to iCal</button>
+      </div>
+    </section>
+
+    <!-- Groups -->
+    <section id="groups" aria-labelledby="groups-heading">
+      <h2 id="groups-heading">Ministry Groups</h2>
+      <div id="group-list" class="list-container"></div>
+      
+      <form id="group-form" class="form-section">
+        <label>
+          Group Name:
+          <input type="text" name="name" required />
+        </label>
+        <button type="submit">Create Group</button>
+      </form>
+    </section>
+
+    <!-- Analytics -->
+    <section id="analytics" aria-labelledby="analytics-heading">
+      <h2 id="analytics-heading">Analytics & Engagement</h2>
+      <div id="analytics-dashboard"></div>
+    </section>
+  </main>
+  
+  <!-- Scripts -->
+
+  
+<footer>
+   <div style="text-align:center; margin-top: 1.5rem;">
+  <button onclick="window.location.href='landing.html'" style="background:#588157;color:#fff;padding:0.8rem 2rem;font-size:1.1rem;border:none;border-radius:6px;cursor:pointer;box-shadow:0 2px 8px rgba(60,60,60,0.07);margin-bottom:1.5rem;">
+    Go to Landing Page
+  </button>
+</div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
